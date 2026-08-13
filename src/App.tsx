@@ -15,6 +15,7 @@ import { SettingsModal } from "./components/SettingsModal";
 import { StockScreener } from "./components/StockScreener";
 import { MarketHeatmap } from "./components/MarketHeatmap";
 import { TradeOrderTicket } from "./components/TradeOrderTicket";
+import { DisqusComments } from "./components/DisqusComments";
 
 import {
   INITIAL_INDICES,
@@ -395,6 +396,9 @@ export default function App() {
                   onSeeAll={() => setIsAllMoversOpen(true)}
                 />
               </div>
+
+              {/* DISQUS DISCUSSION FORUM */}
+              <DisqusComments />
             </>
           )}
         </div>
