@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-background: #10131b;
+  --color-surface-primary: #131722;
+  --color-surface-secondary: #1E222D;
+  --color-surface-variant: #31353d;
+  --color-border-subtle: #2A2E39;
+  --color-market-up: #089981;
+  --color-market-down: #F23645;
+  --color-primary-container: #2962ff;
+  --color-on-surface: #e0e2ed;
+  --color-on-surface-variant: #c3c5d8;
+  --color-outline-variant: #434656;
+}
+
+body {
+  background-color: #10131b;
+  color: #e0e2ed;
+  font-family: var(--font-sans);
+}
+
+.font-data-tabular {
+  font-family: var(--font-mono);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.sparkline-up {
+  stroke: #089981;
+  fill: none;
+  stroke-width: 2;
+}
+
+.sparkline-down {
+  stroke: #F23645;
+  fill: none;
+  stroke-width: 2;
+}
+
+.sparkline-area-up {
+  fill: url(#gradUp);
+}
+
+.sparkline-area-down {
+  fill: url(#gradDown);
+}
+
+@keyframes pulse-green {
+  0% { background-color: rgba(8, 153, 129, 0.3); }
+  100% { background-color: transparent; }
+}
+
+@keyframes pulse-red {
+  0% { background-color: rgba(242, 54, 69, 0.3); }
+  100% { background-color: transparent; }
+}
+
+.animate-pulse-up {
+  animation: pulse-green 1s ease-out;
+}
+
+.animate-pulse-down {
+  animation: pulse-red 1s ease-out;
+}
