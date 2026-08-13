@@ -408,7 +408,7 @@ export const TradingViewChart: React.FC<TradingViewChartProps> = ({
           })}
 
           {/* Crosshair Highlight Line */}
-          {hoveredBarIndex !== null && (() => {
+          {hoveredBarIndex !== null && data[hoveredBarIndex] && (() => {
             const x = getX(hoveredBarIndex);
             const y = getY(data[hoveredBarIndex].close);
             return (
